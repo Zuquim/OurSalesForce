@@ -1,0 +1,43 @@
+Layouts:
+
+Extendem Container e chamam setLayout(LayoutManager manager) como parametro para setar o Layout.
+
+Ex:
+JPanel panel = new JPanel();
+panel.setLayout(new BorderLayout());
+
+- FlowLayout:
+Esquerda para direita e de cima para baixo
+
+Construtores:
+FlowLayout();
+FlowLayout(int align);
+FlowLayout(int align, int hgap, int vgap);
+
+Obs: align pode receber o valores onde os elementos serão posicionados.
+
+- BorderLayout:
+Divide o Container em 5 areas: North, South, East, West e Center.
+Para adicionar componentes é necessário especificar o local
+Ex: add(new JButton("Ok"), BorderLayout.CENTER);
+
+Construtores:
+BorderLayout();
+BorderLayout(int hgap, int vgap);
+
+- GridLayout:
+Similar ao FlowLayout, porém os componentes são adicionados em "células"
+Componentes são alocados na ordem que são inseridos, da esquerda para direita e de cima para baixo
+
+Contrutores:
+GridLayot(int rows, int colums);
+GridLayout(int rows, int colums, int hgap, int vgap);
+
+Outros:
+CardLayout: Usado para exibir um componente de cada vez
+BoxLayout: Empilha componente, como um FlowLayout porém mais flexível
+GridBagLayout: Usado para construir interfaces mais complexas, díficil de implementado manualmente
+GroupLayout: Agrupa os componentes hierarquicamente, díficil de implementado manualmente
+SprintLayout: Mistura características de diversos LayoutManagers para compor seu layout. Díficil de implementado manualmente
+
+

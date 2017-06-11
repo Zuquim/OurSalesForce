@@ -1,3 +1,4 @@
+package model;
 import java.util.ArrayList;
 
 public class Empresa {
@@ -5,13 +6,13 @@ public class Empresa {
 	private String nome;
 	private ArrayList<Vendedor> vendedores;
 	
-	Empresa(String nome) {
+	public Empresa(String nome) {
 		Empresa.id++;
 		this.nome = nome;
 		this.vendedores = new ArrayList<Vendedor>();
 	}
 
-	public static int getId() {
+	public int getId() {
 		return id;
 	}
 

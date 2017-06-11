@@ -1,10 +1,11 @@
+package model;
 
 public class Produto {
 	private static int id = 0;
 	private String nome;
 	// @toDo: implementar um tipo de produto (usando Enum) depois de saber sobre o que se trata o sales force
 	
-	Produto(String nome) {
+	public Produto(String nome) {
 		id++;
 		this.nome = nome;
 	}
@@ -17,7 +18,7 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public static int getId() {
+	public int getId() {
 		return id;
 	}
 	
