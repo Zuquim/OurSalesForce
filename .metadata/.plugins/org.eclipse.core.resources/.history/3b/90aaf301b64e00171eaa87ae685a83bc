@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+
+public class Vendedor extends Pessoa {
+	private static int id = 0;
+	private ArrayList<Produto> produtos;
+	
+	public Vendedor() {
+		Vendedor.id++;
+		this.produtos = new ArrayList<Produto>();
+	}
+	
+	public void adicionaProduto(Produto produto) {
+		this.produtos.add(produto);
+	}
+	
+	
+}

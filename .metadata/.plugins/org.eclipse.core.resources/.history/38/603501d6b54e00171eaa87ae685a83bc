@@ -1,0 +1,4 @@
+
+public class Vendedor extends Pessoa {
+	private static int id = 0;
+}
