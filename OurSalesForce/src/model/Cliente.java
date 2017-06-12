@@ -1,8 +1,8 @@
 package model;
+
 import java.util.ArrayList;
 
 public class Cliente extends Pessoa {
-	private static int id = 0;
 	private String numeroConta;
 	private double saldo;
 	private Vendedor vendedor;
@@ -10,7 +10,7 @@ public class Cliente extends Pessoa {
 
 	public Cliente(String documento, String nome, String numeroConta, double saldo, Vendedor vendedor) {
 		super(documento, nome);
-		id++;
+		setId();
 		setNumeroConta(numeroConta);
 		setSaldo(saldo);
 		setVendedor(vendedor);
@@ -51,10 +51,6 @@ public class Cliente extends Pessoa {
 
 	public ArrayList<Produto> getItems() {
 		return items;
-	}
-	
-	public int getId() {
-		return id;
 	}
 
 	public void comprar(Produto produto) {

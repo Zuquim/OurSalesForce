@@ -1,13 +1,16 @@
 package model;
+
 import java.util.ArrayList;
 
 public class Empresa {
-	private static int id = 0;
+	private static int instancias = 0;
+	private int id;
 	private String nome;
 	private ArrayList<Vendedor> vendedores;
-	
+
 	public Empresa(String nome) {
-		Empresa.id++;
+		id = instancias;
+		Empresa.instancias++;
 		this.nome = nome;
 		this.vendedores = new ArrayList<Vendedor>();
 	}
@@ -28,8 +31,13 @@ public class Empresa {
 		return vendedores;
 	}
 
-	public void setVendedores(ArrayList<Vendedor> vendedores) {
-		this.vendedores = vendedores;
+	public void contratar(Vendedor v) {
+		getVendedores().add(v);
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Empresa: " + nome;
+	}
+
 }

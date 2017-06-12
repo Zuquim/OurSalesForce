@@ -4,6 +4,9 @@ public abstract class Pessoa {
 
 	private String nome;
 	private String documento;
+	private int id;
+
+	private static int instancias = 0;
 
 	public Pessoa(String documento) {
 		this(documento, "Shulambs");
@@ -30,9 +33,26 @@ public abstract class Pessoa {
 		this.documento = documento;
 	}
 
+	public static int getInstancias() {
+		return instancias;
+	}
+
+	public static void setInstancias(int novaInstacia) {
+		instancias = novaInstacia;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId() {
+		this.id = getInstancias();
+		setInstancias(getInstancias() + 1);
+	}
+
 	@Override
 	public String toString() {
-		return "Nome: " + getNome() + "\nNúmero do documento: " + getDocumento();
+		return "Id: " + getId() + "\nNome: " + getNome() + "\nNúmero do documento: " + getDocumento();
 	}
 
 }

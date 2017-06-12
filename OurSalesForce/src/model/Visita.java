@@ -3,13 +3,15 @@ package model;
 import java.util.Date;
 
 public class Visita {
-	private static int id = 0;
+	private static int instancias = 0;
+	private int id;
 	private Vendedor vendedor;
 	private Cliente cliente;
 	private Date data;
 
 	public Visita(Cliente cliente, Vendedor vendedor) {
-		id++;
+		id = instancias;
+		instancias++;
 		this.cliente = cliente;
 		this.vendedor = vendedor;
 		this.data = new Date();

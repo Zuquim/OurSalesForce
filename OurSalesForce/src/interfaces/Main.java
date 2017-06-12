@@ -118,7 +118,7 @@ public class Main {
 		Produto produto;
 		System.out.print("Nome do produto: ");
 		String nomeProduto = in.next();
-		produto = new Produto(nomeProduto);
+		produto = new Produto(nomeProduto, 0);
 		System.out.println("Código do produto: " + produto.getId());
 		produtos.add(produto);
 	}
