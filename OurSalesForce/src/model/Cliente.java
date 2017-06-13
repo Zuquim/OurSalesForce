@@ -65,7 +65,7 @@ public class Cliente extends Pessoa {
 		else {
 			String produtos = "";
 			for (Produto p : getItems()) {
-				produtos += p.toString() + "\n";
+				produtos += p.toString();
 			}
 			return produtos;
 		}
