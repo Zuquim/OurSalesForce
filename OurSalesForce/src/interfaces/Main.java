@@ -8,6 +8,18 @@ public class Main {
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		
+		// Selecione se deseja inicializar com ou sem interface gráfica
+		startInterfaceMode();
+		//startNoInterfaceMode();
+	}
+	
+	public static void startInterfaceMode() {
+		JanelaPrincipal janelaPrincipal = new JanelaPrincipal();
+		janelaPrincipal.setVisible(true);
+	}
+
+	public static void startNoInterfaceMode() {
 		ArrayList<Empresa> empresas = new ArrayList<Empresa>();
 		ArrayList<Vendedor> vendedores = new ArrayList<Vendedor>();
 		ArrayList<Cliente> clientes = new ArrayList<Cliente>();
@@ -46,7 +58,7 @@ public class Main {
 			}
 		}
 	}
-
+	
 	public static int menuOpcoes() {
 		int resp;
 
@@ -160,7 +172,6 @@ public class Main {
 		}
 	}
 
-	// @toDo
 	public static void realizaAgendamento(Agenda agenda, ArrayList<Cliente> clientes, ArrayList<Vendedor> vendedores) {
 		Vendedor vendedorAtual = null;
 		Cliente clienteAtual = null;
@@ -194,4 +205,5 @@ public class Main {
 			System.out.println("Vendedor não encontrado.");
 		}
 	}
+
 }
