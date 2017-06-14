@@ -17,6 +17,11 @@ public class Visita {
 		this.data = new Date();
 	}
 
+	@Override
+	public String toString() {
+		return "Visita [id=" + id + ", vendedor=" + vendedor + ", cliente=" + cliente + ", data=" + data + "]";
+	}
+
 	public Vendedor getVendedor() {
 		return vendedor;
 	}
@@ -44,5 +49,5 @@ public class Visita {
 	public void setData(Date data) {
 		this.data = data;
 	}
-	
+
 }

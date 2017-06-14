@@ -1,11 +1,12 @@
 package model;
+
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Agenda {
 	private Date data;
 	private ArrayList<Visita> visitas;
-	
+
 	public Agenda() {
 		visitas = new ArrayList<Visita>();
 	}
@@ -19,7 +20,19 @@ public class Agenda {
 	}
 
 	public void realizaAgendamento(Vendedor vendedor, Cliente cliente) {
-		visitas.add(new Visita(cliente, vendedor));
+		realizaAgendamento(new Visita(cliente, vendedor));
 	}
-	
+
+	public void realizaAgendamento(Visita v) {
+		visitas.add(v);
+	}
+
+	public String verAgenda() {
+		String agenda = "";
+		for (Visita v : visitas) {
+			agenda += v.toString();
+		}
+		return agenda;
+	}
+
 }
