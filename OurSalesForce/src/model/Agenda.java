@@ -4,32 +4,32 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Agenda {
-	private Date data;
-	private ArrayList<Visita> visitas;
+	private Date date;
+	private ArrayList<Visit> visits;
 
 	public Agenda() {
-		visitas = new ArrayList<Visita>();
+		visits = new ArrayList<Visit>();
 	}
 
-	public Date getData() {
-		return data;
+	public Date getDate() {
+		return date;
 	}
 
-	public void setData(Date data) {
-		this.data = data;
+	public void setDate(Date date) {
+		this.date = date;
 	}
 
-	public void realizaAgendamento(Vendedor vendedor, Cliente cliente) {
-		realizaAgendamento(new Visita(cliente, vendedor));
+	public void scheduleAppointment(Salesman salesman, Customer customer) {
+		scheduleAppointment(new Visit(customer, salesman));
 	}
 
-	public void realizaAgendamento(Visita v) {
-		visitas.add(v);
+	public void scheduleAppointment(Visit v) {
+		visits.add(v);
 	}
 
-	public String verAgenda() {
+	public String checkAgenda() {
 		String agenda = "";
-		for (Visita v : visitas) {
+		for (Visit v : visits) {
 			agenda += v.toString();
 		}
 		return agenda;
